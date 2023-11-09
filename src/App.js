@@ -95,6 +95,9 @@ function App() {
               if (guess.match(/[a-zA-Z]/) && guess.length === 1) {
                 processGuess(guess);
                 e.target.value = '';
+              } else {
+                alert("Please enter Alphabet only")
+                e.target.value = '';
               }
             }}
           />
