@@ -56,7 +56,7 @@ function App() {
       }
     }
 
-    setPreviousGuesses(previousGuesses + guess.toLowerCase());
+    setPreviousGuesses(previousGuesses + guess.toLowerCase() + ',');
   };
 
   // Function to start a new game
@@ -81,9 +81,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Wheel of Fortune</h1>
+      
       {!gameOver ? (
-        <>
+        <div>
+          <h1>Wheel of Fortune</h1>
           <div className="phrase">{hiddenPhrase}</div>
           <div className="previous-guesses">Previous Guesses: {previousGuesses}</div>
           <input
@@ -98,7 +99,7 @@ function App() {
             }}
           />
           <div className="wrong-guesses">Wrong Guesses: {wrongGuesses}</div>
-        </>
+        </div>
       ) : (
         <div className="end-game-message">
           {solved ? (

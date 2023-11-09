@@ -1,7 +1,19 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Viewport height */
   text-align: center;
-  margin: 20px;
 }
+html, body {
+  background-image: url(https://previews.123rf.com/images/koksikoks/koksikoks1612/koksikoks161200003/68719800-fortune-wheel-background-square-background-with-segments-of-the-wheel-fotrune-in-a-circle-a-vector.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+}
+
 
 h1 {
   font-size: 2rem;
@@ -14,6 +26,7 @@ h1 {
 }
 
 .previous-guesses {
+  color: black !important;
   font-size: 1.2rem;
 }
 
@@ -24,7 +37,9 @@ input {
 }
 
 .wrong-guesses {
+  color: red;
   font-size: 1.2rem;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -42,4 +57,71 @@ input {
 
 button {
   font-size: 1.2rem;
+}
+
+/* Apply some basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the app */
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Styling the title */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style the phrase with larger text for better visibility */
+.phrase {
+  font-size: 2em;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+/* Style the input box */
+input[type='text'] {
+  font-size: 1em;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 50px;
+  text-align: center;
+}
+
+/* Style for the div containing previous guesses */
+
+
+/* Style for displaying the number of wrong guesses */
+
+
+/* Style for the end game messages */
+.end-game-message {
+  margin-top: 20px;
+}
+
+
+
+/* Style the 'New Game' button */
+button {
+  background-color: #0275d8; /* Bootstrap's 'btn-primary' color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #025aa5; /* A darker shade for the button */
 }
